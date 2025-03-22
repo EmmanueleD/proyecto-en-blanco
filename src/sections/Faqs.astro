@@ -1,0 +1,23 @@
+---
+import Faq from "../components/Faq.astro";
+
+interface Props {
+  faqs: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+const { faqs } = Astro.props;
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container max-w-4xl">
+    <h2 class="text-3xl font-display font-bold text-center text-gray-900 mb-12">
+      Preguntas Frecuentes
+    </h2>
+    <div class="space-y-6">
+      {faqs.map((faq) => <Faq faq={faq} />)}
+    </div>
+  </div>
+</section>

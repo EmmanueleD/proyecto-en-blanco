@@ -1,0 +1,28 @@
+---
+import Beneficio from "../components/Beneficio.astro";
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container max-w-4xl">
+    <h2 class="text-3xl font-display font-bold text-center text-gray-900 mb-12">
+      ¿Por qué elegir nuestra terapia?
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <Beneficio
+        title="Especialización"
+        description="Terapia enfocada en el desarrollo del apego seguro"
+        icon="mdi:shield-check"
+      />
+      <Beneficio
+        title="Flexibilidad"
+        description="Diferentes duraciones y modalidades de consulta"
+        icon="mdi:order-checkbox-ascending"
+      />
+      <Beneficio
+        title="Experiencia"
+        description="Profesionales especializados en terapia de parejas"
+        icon="mdi:check-decagram"
+      />
+    </div>
+  </div>
+</section>

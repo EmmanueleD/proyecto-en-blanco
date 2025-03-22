@@ -1,0 +1,118 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.vue';
+import Header from "../../components/Header.astro"
+
+// Aquí importaremos los posts del blog usando MDX
+const posts = await Astro.glob('../../content/blog/*.mdx');
+---
+
+<Layout title="Blog - Proyecto en Blanco">
+  <Navigation client:load />
+  
+  <Header
+    title="Blog"
+    description="Artículos, recursos y consejos sobre apego seguro y relaciones de pareja."
+  />
+
+  <!-- Posts Grid -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <div class="aspect-video bg-gray-100">
+              <!-- Placeholder para la imagen destacada -->
+              <div class="w-full h-full flex items-center justify-center text-gray-400">
+                [Imagen]
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <time datetime={post.frontmatter.date}>
+                  {new Date(post.frontmatter.date).toLocaleDateString('es-ES', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+              </div>
+              <h2 class="text-xl font-bold text-gray-900 mb-2">
+                {post.frontmatter.title}
+              </h2>
+              <p class="text-gray-600 mb-4">
+                {post.frontmatter.excerpt}
+              </p>
+              <a 
+                href={post.url} 
+                class="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center"
+              >
+                Leer más
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <h2 class="text-3xl font-display font-bold text-center text-gray-900 mb-12">
+        Explora por Categoría
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="#" class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+          <h3 class="font-bold text-gray-900">Apego Seguro</h3>
+          <p class="text-gray-600 text-sm">12 artículos</p>
+        </a>
+        <a href="#" class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+          <h3 class="font-bold text-gray-900">Comunicación</h3>
+          <p class="text-gray-600 text-sm">8 artículos</p>
+        </a>
+        <a href="#" class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+          <h3 class="font-bold text-gray-900">Conflictos</h3>
+          <p class="text-gray-600 text-sm">6 artículos</p>
+        </a>
+        <a href="#" class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+          <h3 class="font-bold text-gray-900">Intimidad</h3>
+          <p class="text-gray-600 text-sm">9 artículos</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-16">
+    <div class="container max-w-4xl">
+      <div class="bg-primary-600 text-white rounded-lg p-8 md:p-12">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-display font-bold mb-4">
+            Suscríbete a nuestro newsletter
+          </h2>
+          <p class="text-primary-100">
+            Recibe artículos, consejos y recursos directamente en tu bandeja de entrada.
+          </p>
+        </div>
+        <form class="max-w-md mx-auto flex gap-4">
+          <input
+            type="email"
+            placeholder="Tu email"
+            class="flex-1 px-4 py-2 rounded-md text-gray-900 placeholder-gray-500"
+            required
+          />
+          <button type="submit" class="btn bg-white text-primary-600 hover:bg-primary-50">
+            Suscribirse
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

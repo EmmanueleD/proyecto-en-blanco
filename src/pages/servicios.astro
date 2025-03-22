@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.vue";
+import Header from "../components/Header.astro";
+import Beneficios from "../sections/Beneficios.astro";
+import Faqs from "../sections/Faqs.astro";
+import Calendly from "../sections/Calendly.astro";
+import Cta from "../sections/Cta.astro";
+import ServiciosSection from "../sections/Servicios.astro";
+---
+
+<Layout title="Servicios - Proyecto en Blanco">
+  <Navigation client:load />
+  <Header
+    title="Nuestros Servicios"
+    description="Terapia especializada en apego seguro para individuos y parejas"
+  />
+
+  <!-- Servicios -->
+  <ServiciosSection
+    services={[
+      {
+        title: "Consultas Individuales",
+        icon: "flowbite:user-solid",
+        services: [
+          {
+            title: "Sesión de 30 minutos",
+            description: "Consulta breve individual",
+            price: 30
+          },
+          {
+            title: "Sesión de 60 minutos",
+            description: "Consulta completa individual",
+            price: 50
+          },
+          {
+            title: "Lote 5 sesiones de 60 minutos",
+            description: "Ahorra 50€",
+            price: 200
+          }
+        ],
+        buttonText: "Reservar Consulta Individual"
+      },
+      {
+        title: "Consultas en Pareja",
+        icon: "flowbite:users-solid",
+        services: [
+          {
+            title: "Sesión de 30 minutos",
+            description: "Consulta breve individual",
+            price: 30
+          },
+          {
+            title: "Sesión de 60 minutos",
+            description: "Consulta completa individual",
+            price: 50
+          },
+          {
+            title: "Lote 5 sesiones de 60 minutos",
+            description: "Ahorra 50€",
+            price: 200
+          }
+        ],
+        buttonText: "Reservar Consulta en Pareja"
+      }
+    ]}
+  />
+  <!-- Beneficios -->
+  <Beneficios />
+
+  <!-- Calendly Integration -->
+  <Calendly />
+
+  <!-- FAQ -->
+  <Faqs
+    faqs={[
+      {
+        question: "¿Cómo son las sesiones online?",
+        answer:
+          "Las sesiones se realizan a través de videollamada en una plataforma segura y privada. Recibirás el enlace al confirmar tu cita."
+      },
+      {
+        question: "¿Puedo cambiar mi cita?",
+        answer:
+          "Sí, puedes modificar o cancelar tu cita hasta 24 horas antes de la sesión programada sin ningún coste."
+      },
+      {
+        question: "¿Qué métodos de pago aceptan?",
+        answer:
+          "Aceptamos transferencia bancaria y pago con tarjeta a través de una plataforma segura."
+      }
+    ]}
+  />
+
+  <!-- CTA -->
+  <Cta />
+</Layout>

@@ -1,0 +1,45 @@
+---
+// Importa le icone come componenti
+import Icon from './Icon.vue';
+
+interface Props {
+  title: string;
+  icon: string;
+  services: {
+    title: string;
+    description: string;
+    price: number;
+  }[];
+  buttonText: string;
+}
+
+const { title, icon, services, buttonText } = Astro.props;
+
+---
+
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+  <div
+    class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6"
+  >
+    <Icon client:load name={icon} size={32} className="text-primary" />
+  </div>
+  <h2 class="text-2xl font-display font-bold text-gray-900 mb-6">
+    {title}
+  </h2>
+  <div class="space-y-4 mb-8">
+    {
+      services.map((service) => (
+        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+          <div>
+            <h3 class="font-medium text-gray-900">{service.title}</h3>
+            <p class="text-sm text-gray-500">{service.description}</p>
+          </div>
+          <span class="text-xl font-bold text-primary">{service.price} €</span>
+        </div>
+      ))
+    }
+  </div>
+  <a href="#calendly-embed" class="btn-primary w-full text-center">
+    {buttonText}
+  </a>
+</div>

@@ -1,48 +1,56 @@
-# Astro Starter Kit: Basics
+# Proyecto en Blanco - Website
 
-```sh
-npm create astro@latest -- --template basics
+Sitio web oficial de Proyecto en Blanco, un equipo de terapeutas especializados en ayudar a parejas a transitar hacia un apego seguro.
+
+## 🚀 Stack Tecnológico
+
+- **Framework:** Astro + Vue
+- **Estilos:** Tailwind CSS
+- **Blog:** MDX
+- **Hosting:** Netlify/Vercel
+- **Reservas:** Calendly
+
+## 📦 Instalación
+
+```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 📄 Estructura del Proyecto
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/          # Archivos estáticos
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── components/  # Componentes Vue y Astro
+│   ├── layouts/     # Plantillas de página
+│   ├── pages/       # Páginas del sitio
+│   ├── content/     # Contenido del blog (MDX)
+│   └── styles/      # Estilos globales
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🌐 SEO y Rendimiento
 
-## 🧞 Commands
+- SSG (Static Site Generation) para máximo rendimiento
+- MDX para contenido del blog optimizado para SEO
+- Optimización de imágenes automática
+- Carga diferida de recursos
 
-All commands are run from the root of the project, from a terminal:
+## 📱 Desarrollo
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Clona el repositorio
+2. Instala las dependencias: `npm install`
+3. Inicia el servidor: `npm run dev`
+4. Abre [http://localhost:4321](http://localhost:4321)
 
-## 👀 Want to learn more?
+## 📝 Licencia
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Todos los derechos reservados - Proyecto en Blanco {{ ... }}

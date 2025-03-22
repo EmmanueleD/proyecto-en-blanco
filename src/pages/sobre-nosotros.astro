@@ -1,0 +1,223 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.vue";
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Sobre Nosotros - Proyecto en Blanco">
+  <Navigation client:load />
+
+  <Header
+    title="Nuestra Historia"
+    description="En Proyecto en Blanco, nos dedicamos a ayudar a las parejas a construir relaciones más sanas y satisfactorias a través del entendimiento y desarrollo del apego seguro."
+  />
+
+  <!-- Misión y Visión -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-display font-bold text-gray-900 mb-6">
+            Nuestra Misión
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Transformar la manera en que las parejas se relacionan,
+            proporcionando herramientas y conocimientos basados en la teoría del
+            apego para construir vínculos más seguros y satisfactorios.
+          </p>
+          <p class="text-gray-600">
+            Creemos que cada pareja tiene el potencial de desarrollar un apego
+            seguro y una conexión más profunda cuando cuenta con el apoyo y las
+            herramientas adecuadas.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-display font-bold text-gray-900 mb-6">
+            Nuestra Visión
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Ser referentes en la terapia de parejas basada en el apego en el
+            mundo hispanohablante, creando un impacto positivo en miles de
+            relaciones a través de nuestros servicios, libros y contenido
+            educativo.
+          </p>
+          <p class="text-gray-600">
+            Aspiramos a crear una comunidad donde las parejas puedan aprender,
+            crecer y transformar sus relaciones juntas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipo -->
+  <section class="py-16 bg-gray-50">
+    <div class="container max-w-4xl">
+      <h2
+        class="text-3xl font-display font-bold text-center text-gray-900 mb-12"
+      >
+        Nuestro Equipo
+      </h2>
+      <div class="space-y-8">
+        <div class="relative rounded-2xl overflow-hidden shadow-xl">
+          <img
+            src="/images/pareja3.jpg"
+            alt="Marián y Sebas"
+            class="w-full h-[400px] object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+          >
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-bold mb-2">Marián y Sebas</h3>
+            <p class="text-gray-200">Fundadores de Proyecto en Blanco</p>
+          </div>
+        </div>
+
+        <div class="prose prose-lg mx-auto space-y-6 text-gray-600">
+          <p class="text-xl">
+            ¡Hola! Somos Marián y Sebas, una pareja que estamos recorriendo un
+            camino extraordinario hacia el apego seguro. Después de años de
+            lucha con nuestros propios estilos de apego ansioso (Sebas) y
+            evitativo (Marián), hemos alcanzado una conexión sólida y amorosa
+            que queremos compartir contigo. Padres de dos hermosos niños,
+            llevamos juntos desde 2010. Nuestra familia es el corazón de nuestra
+            motivación para ayudar a otras parejas a construir relaciones
+            sólidas y enriquecedoras.
+          </p>
+
+          <p class="text-xl">
+            Durante más de una década, hemos explorado el camino del crecimiento
+            personal y espiritual. Hemos completado cursos de mindfulness,
+            respiración consciente, exploración del mundo interior y espiritual,
+            meditación, entre otros, acumulando sabiduría y experiencia.
+          </p>
+
+          <p class="text-xl">
+            Aunque hemos ayudado a otros matrimonios en su camino de perdón y
+            aceptación, fue el descubrimiento de los estilos de apego lo que
+            marcó un punto de inflexión en nuestra propia relación. Estudiar y
+            experimentar con estos patrones nos permitió una transformación
+            profunda y significativa.
+          </p>
+
+          <p class="text-xl">
+            Hemos fusionado nuestro conocimiento de estilos de apego con nuestra
+            trayectoria en el crecimiento personal. Desarrollamos nuestras
+            propias herramientas de autoayuda y apoyo en la pareja, y ahora
+            estamos comprometidos a compartir esta valiosa sabiduría para
+            enriquecer la vida de otras personas. Nuestra principal motivación
+            es divulgar la importancia de los patrones de apego en las
+            relaciones personales. Queremos ayudar a todo aquel que desee
+            mejorar su conexión con herramientas prácticas y la sabiduría que
+            hemos adquirido en nuestra propia vivencia.
+          </p>
+
+          <p class="text-xl font-semibold text-primary">
+            Si estás listo para transformar tu relación y explorar el camino
+            hacia el apego seguro, ¡estamos aquí para acompañarte!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="py-16">
+    <div class="container">
+      <h2
+        class="text-3xl font-display font-bold text-center text-gray-900 mb-12"
+      >
+        Nuestros Valores
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-primary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Empatía</h3>
+          <p class="text-gray-600">
+            Nos acercamos a cada pareja con comprensión y sin juicios.
+          </p>
+        </div>
+        <div class="text-center">
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-primary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Profesionalismo</h3>
+          <p class="text-gray-600">
+            Basamos nuestro trabajo en evidencia científica y mejores prácticas.
+          </p>
+        </div>
+        <div class="text-center">
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-8 h-8 text-primary-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Crecimiento</h3>
+          <p class="text-gray-600">
+            Creemos en el potencial de transformación de cada relación.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="bg-primary-600 text-white py-16">
+    <div class="container text-center">
+      <h2 class="text-3xl font-display font-bold mb-6">
+        ¿Listo para comenzar tu viaje?
+      </h2>
+      <p class="text-xl mb-8 text-primary-100">
+        Agenda una consulta y descubre cómo podemos ayudarte.
+      </p>
+      <a
+        href="/servicios"
+        class="btn bg-white text-primary-600 hover:bg-primary-50"
+      >
+        Agenda tu consulta
+      </a>
+    </div>
+  </section>
+</Layout>

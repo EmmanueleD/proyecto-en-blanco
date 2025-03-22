@@ -1,0 +1,35 @@
+---
+import CardServicios from "../components/CardServicios.astro";
+
+interface Props {
+  services: {
+    title: string;
+    icon: string;
+    services: {
+      title: string;
+      description: string;
+      price: number;
+    }[];
+    buttonText: string;
+  }[];
+}
+
+const { services } = Astro.props;
+---
+
+<section class="py-16 md:py-24">
+  <div class="container max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12">
+      {
+        services.map((service) => (
+          <CardServicios
+            title={service.title}
+            icon={service.icon}
+            services={service.services}
+            buttonText={service.buttonText}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

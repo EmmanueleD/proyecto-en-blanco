@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-600;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary text-primary hover:bg-secondary-400;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+}
+
+/* Estilos personalizados para fondos degradados */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #1a5964 0%, #113840 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #ffffaf 0%, #ffff8c 100%);
+}

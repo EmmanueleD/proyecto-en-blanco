@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.vue";
+import Libro from "../components/Libro.astro";
+import Cta from "../sections/Cta.astro";
+---
+
+<Layout title="Libros - Proyecto en Blanco">
+  <Navigation client:load />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-hero text-white">
+    <div class="container py-20">
+      <h1 class="text-4xl md:text-5xl font-display font-bold mb-6">
+        Nuestros Libros
+      </h1>
+      <p class="text-xl text-gray-100 max-w-3xl mb-8">
+        Recursos para desarrollar un apego seguro y mejorar tus relaciones
+      </p>
+    </div>
+  </section>
+
+  <!-- Libros -->
+  <section class="py-16 md:py-24">
+    <div class="container max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Cuaderno de trabajo Apego Evitativo -->
+        <Libro
+          title="Cuaderno de trabajo de un Apego Evitativo: Camino hacia un Apego Seguro"
+          subtitle="Cuaderno Interactivo para Transformar tu Vida"
+          description="Descubre tu Camino hacia el Apego Seguro: Cuaderno Interactivo para Transformar tu Vida"
+          image="/images/libro-evitativo.jpg"
+          link="https://www.amazon.es/dp/B0D31FRC4Z?social_share=cm_sw_r_cp_ud_dp_0BEAG9H32QKXJP86EZ0Q"
+        />
+        <!-- Cuaderno de trabajo Apego Ansioso -->
+        <Libro
+          title="Cuaderno de trabajo de un Apego Ansioso: Camino hacia un Apego Seguro"
+          subtitle="Cuaderno Interactivo para Transformar tu Vida"
+          description="Descubre tu Camino hacia el Apego Seguro: Cuaderno Interactivo para Transformar tu Vida"
+          image="/images/libro-ansioso.jpg"
+          link="https://www.amazon.es/dp/B0D49TLDDL?social_share=cm_sw_r_cp_ud_dp_YB57NWBS46D6ANAA40Q8"
+        />
+        <!-- Diario de un Apego Evitativo -->
+        <Libro
+          title="Diario de un Apego Evitativo: Camino hacia un Apego Seguro"
+          subtitle="Diario Interactivo para Transformar tu Vida"
+          description="Herramienta esencial de 192 páginas diseñada para acompañarte en tu viaje hacia un apego seguro. Especialmente pensado para personas con apego evitativo, este cuaderno diario te invita a reflexionar sobre tus experiencias diarias, explorar tus emociones y desarrollar una mayor consciencia personal."
+          image="/images/diario-evitativo.jpg"
+          link="https://www.amazon.es/dp/B0CQSLDXDH"
+        />
+        <!-- Diario de un Apego Ansioso -->
+        <Libro
+          title="Diario de un Apego Ansioso: Camino hacia un Apego Seguro"
+          subtitle="Diario Interactivo para Transformar tu Vida"
+          description="Herramienta esencial de 192 páginas diseñada para acompañarte en tu viaje hacia un apego seguro. Especialmente pensado para personas con apego ansioso, este cuaderno diario te invita a reflexionar sobre tus experiencias diarias, explorar tus emociones y desarrollar una mayor consciencia personal"
+          image="/images/diario-ansioso.jpg"
+          link="https://www.amazon.es/dp/B0CQJ9H29B"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <Cta />
+</Layout>

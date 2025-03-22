@@ -1,11 +1,106 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.vue";
+import Hero from "../sections/Hero.astro";
+import Icon from "../components/Icon.vue";
+import Newsletter from "../components/Newsletter.astro";
+import Cta from "../sections/Cta.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Inicio - Proyecto en Blanco">
+  <Navigation client:load />
+
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- Servicios -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <h2
+        class="text-3xl md:text-4xl font-display font-bold text-center text-gray-900 mb-12"
+      >
+        Nuestros Servicios
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6"
+          >
+            <Icon
+              name="flowbite:users-solid"
+              client:load
+              className="w-8 h-8 text-primary"
+            />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Consultorias</h3>
+          <p class="text-gray-600 mb-6">
+            Sesiones personalizadas para ayudarte a desarrollar un apego seguro
+            y mejorar tu relación.
+          </p>
+          <a
+            href="/servicios"
+            class="text-primary hover:text-primary-700 font-medium inline-flex items-center"
+          >
+            Más información
+            <Icon name="ic:round-chevron-right" client:load className="ml-1" />
+          </a>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6"
+          >
+            <Icon
+              name="iconoir:book-solid"
+              client:load
+              className="w-8 h-8 text-primary"
+            />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">
+            Libros y Recursos
+          </h3>
+          <p class="text-gray-600 mb-6">
+            Material educativo para profundizar en el desarrollo del apego
+            seguro.
+          </p>
+          <a
+            href="/libros"
+            class="text-primary hover:text-primary-700 font-medium inline-flex items-center"
+          >
+            Ver libros
+            <Icon name="ic:round-chevron-right" client:load className="ml-1" />
+          </a>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+          <div
+            class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6"
+          >
+            <Icon
+              name="iconoir:podcast-solid"
+              client:load
+              className="w-8 h-8 text-primary"
+            />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Podcast</h3>
+          <p class="text-gray-600 mb-6">
+            Contenido educativo gratuito sobre apego y relaciones de pareja.
+          </p>
+          <a
+            href="/podcast"
+            class="text-primary hover:text-primary-700 font-medium inline-flex items-center"
+          >
+            Ver podcast
+            <Icon name="ic:round-chevron-right" client:load className="ml-1" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <Newsletter />
+
+  <!-- CTA -->
+  <Cta />
 </Layout>

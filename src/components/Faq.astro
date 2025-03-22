@@ -1,0 +1,74 @@
+---
+interface Props {
+  faq: {
+    question: string;
+    answer: string;
+  };
+}
+
+const { faq } = Astro.props;
+---
+
+<div class="bg-white p-6 rounded-lg shadow-sm">
+  <details class="group">
+    <summary class="list-none cursor-pointer">
+      <div class="flex justify-between items-center">
+        <h3 class="text-xl font-bold text-gray-900">{faq.question}</h3>
+        <svg
+          class="w-6 h-6 text-gray-500 transform transition-transform duration-200 group-open:rotate-180"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </div>
+    </summary>
+    <div class="mt-2 text-gray-600">
+      <p class="py-2">{faq.answer}</p>
+    </div>
+  </details>
+</div>
+
+<style>
+  /* Rimuove il triangolino default del details */
+  details > summary::-webkit-details-marker,
+  details > summary::marker {
+    display: none;
+  }
+
+  /* Animación de abertura/cierre */
+  details[open] > summary + div {
+    animation: slide-down 0.5s ease-out;
+  }
+
+  details:not([open]) > summary + div {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+</style>

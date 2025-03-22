@@ -1,0 +1,116 @@
+---
+import Icon from "../components/Icon.vue";
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-white">
+  <div class="container py-12 md:py-16">
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Logo y descripción -->
+      <div class="col-span-1">
+        <img
+          src="/images/pareja2.jpg"
+          alt="Proyecto en Blanco"
+          class="w-32 h-32 object-contain mb-4"
+        />
+        <p class="text-gray-400">
+          Construyendo <span class="font-semibold text-primary"
+            >relaciones más fuertes</span
+          > aprendiendo a transitar hacia un
+          <span class="font-semibold text-primary">Apego Seguro</span>
+        </p>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div class="col-span-1">
+        <h3 class="text-lg font-bold mb-4">Enlaces</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="/servicios" class="text-gray-400 hover:text-white"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a href="/libros" class="text-gray-400 hover:text-white">Libros</a>
+          </li>
+          <li>
+            <a href="/podcast" class="text-gray-400 hover:text-white">Podcast</a
+            >
+          </li>
+          <li>
+            <a href="/sobre-nosotros" class="text-gray-400 hover:text-white"
+              >Sobre Nosotros</a
+            >
+          </li>
+          <li>
+            <a href="/contacto" class="text-gray-400 hover:text-white"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-span-1">
+        <h3 class="text-lg font-bold mb-4">Contacto</h3>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="mailto:proyectoenblanco1@gmail.com"
+              class="text-gray-400 hover:text-white flex items-center"
+            >
+              <Icon name="mdi:email" size={32} className="mr-2" client:load />
+              proyectoenblanco1@gmail.com
+            </a>
+          </li>
+        </ul>
+
+        <!-- Redes Sociales -->
+        <div class="mt-6">
+          <h3 class="text-lg font-bold mb-4">Síguenos</h3>
+          <div class="flex space-x-4">
+            <a
+              href="https://www.instagram.com/proyectoenblanco.insta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white"
+            >
+              <Icon name="mdi:instagram" size={32} client:load />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCc89DFl_bF60n-qXtkYGgOw"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white"
+            >
+              <Icon name="mdi:youtube" size={32} client:load />
+            </a>
+            <a
+              href="https://www.tiktok.com/@proyectoenblancoms"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white"
+            >
+              <Icon name="ic:baseline-tiktok" size={32} client:load />
+            </a>
+            <a
+              href="https://open.spotify.com/show/0F2tr7NmBQi874v4a7TI3i?si=28fa22fce5124be0"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white"
+            >
+              <Icon name="mdi:spotify" size={32} client:load />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+      <p>
+        &copy; {currentYear} Proyecto en Blanco. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</footer>
