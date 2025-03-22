@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="container max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Imagen -->
+      <div class="relative">
+        <div
+          class="absolute -inset-4 bg-primary/10 rounded-lg transform rotate-3"
+        >
+        </div>
+        <Image
+          src="/images/pareja4.jpg"
+          alt="Marian y Sebas de Proyecto en Blanco"
+          width={600}
+          height={400}
+          class="rounded-lg shadow-xl relative z-10 object-cover w-full h-full"
+        />
+      </div>
+
+      <!-- Contenido -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900">
+          ¿Quieres participar en nuestro podcast?
+        </h2>
+
+        <div class="prose prose-lg text-gray-600 max-w-none space-y-4">
+          <p>
+            En Proyecto en Blanco, buscamos nuevas voces y experiencias que
+            enriquezcan nuestro contenido. Si tienes una historia de superación,
+            eres un profesional con conocimientos valiosos, o tienes
+            experiencias personales que puedan ayudar a nuestra comunidad,
+            queremos saber de ti.
+          </p>
+
+          <p>
+            <a
+              href="/contacto"
+              class="text-primary hover:text-primary-700 font-medium"
+            >
+              contactanos
+            </a>
+            explicando lo que puedes aportar al canal. Ten en cuenta que realizaremos
+            una selección de los participantes para asegurarnos de que encajen con
+            el estilo y los temas de nuestro podcast.
+          </p>
+
+          <p class="font-bold">¡Esperamos recibir tu historia!</p>
+
+          <div class="pt-4">
+            <p class="text-lg font-display text-primary">
+              Marian y Sebas<br />
+              <span class="text-gray-600">Proyecto en Blanco</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

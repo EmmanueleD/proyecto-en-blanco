@@ -4,7 +4,7 @@
       <div class="flex justify-between items-center py-4">
         <!-- Logo -->
         <a href="/" class="flex items-center space-x-2">
-          <span class="font-display text-2xl font-semibold text-primary-600">Proyecto en Blanco</span>
+          <img src="https://img.logoipsum.com/254.svg" alt="Logo de Proyecto en Blanco">
         </a>
 
         <!-- Desktop Navigation -->

@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.vue';
-
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.vue";
+import InvitacionPodcast from "../sections/InvitacionPodcast.astro";
 ---
 
 <Layout title="Podcast - Proyecto en Blanco">
   <Navigation client:load />
-  
+
   <!-- Hero Section -->
   <section class="bg-gradient-hero text-white">
     <div class="container py-20">
@@ -14,16 +14,19 @@ import Navigation from '../components/Navigation.vue';
         Nuestro Podcast
       </h1>
       <p class="text-xl text-gray-100 max-w-3xl mb-8">
-        Conversaciones profundas sobre relaciones, apego seguro y desarrollo personal.
+        Conversaciones profundas sobre relaciones, apego seguro y desarrollo
+        personal.
       </p>
-      <a 
-        href="https://open.spotify.com/show/0F2tr7NmBQi874v4a7TI3i?si=28fa22fce5124be0" 
-        target="_blank" 
+      <a
+        href="https://open.spotify.com/show/0F2tr7NmBQi874v4a7TI3i?si=28fa22fce5124be0"
+        target="_blank"
         rel="noopener noreferrer"
         class="btn bg-[#1DB954] hover:bg-[#1ed760] text-white inline-flex items-center"
       >
         <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+          <path
+            d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
+          ></path>
         </svg>
         Escuchar en Spotify
       </a>
@@ -34,14 +37,13 @@ import Navigation from '../components/Navigation.vue';
   <section class="py-16">
     <div class="container max-w-4xl">
       <div class="aspect-video">
-        <iframe 
+        <iframe
           class="w-full h-full rounded-lg shadow-lg"
-          src="https://open.spotify.com/embed/show/0F2tr7NmBQi874v4a7TI3i/video?utm_source=generator" 
-          frameborder="0" 
-          allowfullscreen="" 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-          loading="lazy"
-        ></iframe>
+          src="https://open.spotify.com/embed/show/0F2tr7NmBQi874v4a7TI3i/video?utm_source=generator"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -54,57 +56,109 @@ import Navigation from '../components/Navigation.vue';
           ¿De qué trata nuestro podcast?
         </h2>
         <p class="text-xl text-gray-600">
-          Un espacio para explorar y comprender las relaciones desde la perspectiva del apego seguro
+          Un espacio para explorar y comprender las relaciones desde la
+          perspectiva del apego seguro
         </p>
       </div>
-      
+
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+          <div
+            class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+              ></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">
             Conversaciones Profundas
           </h3>
           <p class="text-gray-600">
-            Exploramos temas relevantes sobre relaciones de pareja, comunicación y desarrollo personal.
+            Exploramos temas relevantes sobre relaciones de pareja, comunicación
+            y desarrollo personal.
           </p>
         </div>
 
         <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          <div
+            class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+              ></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">
             Recursos Prácticos
           </h3>
           <p class="text-gray-600">
-            Compartimos herramientas y consejos que puedes aplicar en tu relación.
+            Compartimos herramientas y consejos que puedes aplicar en tu
+            relación.
           </p>
         </div>
 
         <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          <div
+            class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+              ></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">
             Invitados Especiales
           </h3>
           <p class="text-gray-600">
-            Entrevistas con expertos en terapia, psicología y desarrollo personal.
+            Entrevistas con expertos en terapia, psicología y desarrollo
+            personal.
           </p>
         </div>
 
         <div class="bg-white p-8 rounded-lg shadow-sm">
-          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          <div
+            class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">
@@ -118,6 +172,8 @@ import Navigation from '../components/Navigation.vue';
     </div>
   </section>
 
+  <InvitacionPodcast />
+
   <!-- CTA -->
   <section class="py-16 bg-gradient-secondary">
     <div class="container max-w-4xl text-center">
@@ -125,20 +181,19 @@ import Navigation from '../components/Navigation.vue';
         No te pierdas ningún episodio
       </h2>
       <p class="text-xl text-gray-600 mb-8">
-        Suscríbete para recibir notificaciones de nuevos episodios y contenido exclusivo.
+        Suscríbete para recibir notificaciones de nuevos episodios y contenido
+        exclusivo.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a 
-          href="https://open.spotify.com/show/0F2tr7NmBQi874v4a7TI3i?si=28fa22fce5124be0" 
-          target="_blank" 
+        <a
+          href="https://open.spotify.com/show/0F2tr7NmBQi874v4a7TI3i?si=28fa22fce5124be0"
+          target="_blank"
           rel="noopener noreferrer"
           class="btn bg-[#1DB954] hover:bg-[#1ed760] text-white"
         >
           Seguir en Spotify
         </a>
-        <a href="/contacto" class="btn-outline">
-          Contactar
-        </a>
+        <a href="/contacto" class="btn-outline"> Contactar </a>
       </div>
     </div>
   </section>

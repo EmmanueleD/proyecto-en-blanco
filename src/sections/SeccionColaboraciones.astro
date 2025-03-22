@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="container max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Imagen -->
+      <div class="relative">
+        <div
+          class="absolute -inset-4 bg-primary/10 rounded-lg transform rotate-3"
+        >
+        </div>
+        <Image
+          src="/images/colaboracionEventos.jpg"
+          alt="Colaboraciones y eventos de Proyecto en Blanco"
+          width={600}
+          height={400}
+          class="rounded-lg shadow-xl relative z-10 object-cover w-full h-full"
+        />
+      </div>
+
+      <!-- Contenido -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900">
+          Invítanos a tu Evento
+        </h2>
+
+        <div class="prose prose-lg text-gray-600 max-w-none space-y-4">
+          <p>
+            Estamos encantados de considerar colaboraciones para charlas,
+            conferencias, ponencias, entrevistas y otros eventos. Si deseas que
+            participemos en tu evento, por favor, envíanos un correo electrónico
+            a
+            <a
+              href="/contacto"
+              class="text-primary hover:text-primary-700 font-medium"
+            >
+              contactanos
+            </a> proporcionando detalles clave como la fecha, duración estimada,
+            tipo de evento, tema propuesto, audiencia prevista, formato deseado.
+          </p>
+
+          <p>¡Gracias por considerarnos para tu evento!</p>
+
+          <p>
+            Nos pondremos en contacto contigo tan pronto como sea posible para
+            discutir los detalles y explorar esta oportunidad de colaboración.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
